@@ -17,7 +17,7 @@ import m1t_test_Line as m1t
 ###############################################################################
 
 # -----------------------------------------------------------------------------
-# TODO: 2.  Right-click on the  src  folder and
+# DONE: 2.  Right-click on the  src  folder and
 #               Mark Directory as ... Sources Root,
 #           if you have not already done so.
 #
