@@ -20,7 +20,7 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    # run_test_simple_t()
+    run_test_simple_t()
     # run_test_set_colors()
     # run_test_move_by()
     # run_test_clone()
@@ -162,7 +162,7 @@ class CapitalT(object):
           :type letter_thickness:    int
         """
         # ---------------------------------------------------------------------
-        # TODO: 3.
+        # DONE: 3.
         #   READ the above specification, including the Example.
         #   Implement this method, using the instance variables
         #      h_rect
@@ -170,6 +170,8 @@ class CapitalT(object):
         #   and *** NO OTHER INSTANCE VARIABLES. ***
         #   Note: Implement   attach_to   before testing this __init__ method.
         # ---------------------------------------------------------------------
+        self.h_rect = rg.Rectangle(rg.Point(intersection_center.x-(width/2),intersection_center.y-(letter_thickness/2)),rg.Point(intersection_center.x+(width/2),intersection_center.y+(letter_thickness/2)))
+        self.v_rect = rg.Rectangle(rg.Point(intersection_center.x-(letter_thickness/2),intersection_center.y-(letter_thickness/2)),rg.Point(intersection_center.x+(letter_thickness/2),intersection_center.y-(letter_thickness/2)+(height)))
 
     def attach_to(self, window):
         """
@@ -198,6 +200,8 @@ class CapitalT(object):
         #     c. Compare the graphics window to the   simple_t.pdf   pictures.
         #        They should look exactly the same as each other.
         # ---------------------------------------------------------------------
+        self.h_rect.attach_to(window)
+        self.v_rect.attach_to(window)
 
     def set_colors(self, fill_color, outline_color):
         """
