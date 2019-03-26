@@ -23,7 +23,7 @@ def main():
     run_test_simple_t()
     run_test_set_colors()
     run_test_move_by()
-    # run_test_clone()
+    run_test_clone()
 
 
 def run_test_simple_t():
@@ -304,7 +304,7 @@ class CapitalT(object):
           :rtype: CapitalT
         """
         # ---------------------------------------------------------------------
-        # TODO: 7.
+        # DONE: 7.
         #   READ the above specification, including the Example.
         #   Implement this method, then TEST it by:
         #     a. Un-comment the call to its test function, in main.  Run.
@@ -316,6 +316,13 @@ class CapitalT(object):
         # IMPORTANT RESTRICTION: You are NOT permitted to add any instance
         # variables beyond  h_rect  and  v_rect, at any point of this exercise.
         #######################################################################
+        height = self.v_rect.get_height()
+        width = self.h_rect.get_width()
+        thickness = self.h_rect.get_height()
+        intersection = rg.Point(self.v_rect.corner_1.x+(thickness/2),self.v_rect.corner_1.y+(thickness/2))
+        t = CapitalT(intersection,width,height,thickness)
+        t.set_colors(self.h_rect.fill_color,self.h_rect.outline_color)
+        return t
 
 
 # -----------------------------------------------------------------------------
